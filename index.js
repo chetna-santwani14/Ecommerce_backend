@@ -5,6 +5,7 @@ import connectDB from './config/mongodb.js'
 import connectCloudinary from './config/cloudinary.js'
 import userRouter from './Routes/userRoutes.js'
 import productRouter from './Routes/productRoutes.js'
+import cartRouter from './Routes/cartRoutes.js'
 
 //App config
 const app=express()
@@ -19,6 +20,7 @@ app.use(express.urlencoded({extended: true}));
 // API Endpoint
 app.use('/api/user',userRouter)
 app.use('/api/product',productRouter)
+app.use('/api/cart',cartRouter)
 
 // starting the express server 
 
