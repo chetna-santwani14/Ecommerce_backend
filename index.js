@@ -6,6 +6,7 @@ import connectCloudinary from './config/cloudinary.js'
 import userRouter from './Routes/userRoutes.js'
 import productRouter from './Routes/productRoutes.js'
 import cartRouter from './Routes/cartRoutes.js'
+import orderRouter from './Routes/orderRoute.js'
 
 //App config
 const app=express()
@@ -21,6 +22,7 @@ app.use(express.urlencoded({extended: true}));
 app.use('/api/user',userRouter)
 app.use('/api/product',productRouter)
 app.use('/api/cart',cartRouter)
+app.use('/api/order',orderRouter)
 
 // starting the express server 
 
